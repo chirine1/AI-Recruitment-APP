@@ -4,8 +4,8 @@ from typing import Generator
 from sqlalchemy import create_engine
 
 settings = get_settings()
-
-engine = create_engine(settings.DATABASE_URI,
+SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:hamahama12@localhost/AI-Recruitment-APP-Database'
+engine = create_engine(SQLALCHEMY_DATABASE_URL,
                        pool_pre_ping=True,
                        pool_recycle=3600,
                        pool_size=20,
