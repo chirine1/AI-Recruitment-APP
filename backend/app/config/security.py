@@ -85,7 +85,7 @@ async def get_token_user(token: str, db):
 
 
 async def load_user(email: str, db):
-    from backend.app.models.user import User
+    from app.models.user import User
     try:
         user = db.query(User).filter(User.email == email).first()
     except Exception as user_exec:

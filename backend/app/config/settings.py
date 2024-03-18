@@ -18,13 +18,13 @@ class Settings(BaseSettings):
     # FrontEnd Application
     FRONTEND_HOST: str = os.environ.get("FRONTEND_HOST", "http://localhost:3000")
 
-    # PostgreSQL Database Config
-    POSTGRES_HOST: str = os.environ.get("POSTGRES_HOST", 'localhost')
-    POSTGRES_USER: str = os.environ.get("POSTGRES_USER", 'postgres')
-    POSTGRES_PASS: str = os.environ.get("POSTGRES_PASSWORD", 'chouchou@@123')
-    POSTGRES_PORT: int = int(os.environ.get("POSTGRES_PORT", 5432))
-    POSTGRES_DB: str = os.environ.get("POSTGRES_DB", 'AI-Recruitment-Database')
-    DATABASE_URI: str = f"postgresql+psycopg2://{POSTGRES_USER}:{quote_plus(POSTGRES_PASS)}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
+    # MySql Database Config
+    MYSQL_HOST: str = os.environ.get("MYSQL_HOST", 'localhost')
+    MYSQL_USER: str = os.environ.get("MYSQL_USER", 'root')
+    MYSQL_PASS: str = os.environ.get("MYSQL_PASSWORD", '')
+    MYSQL_PORT: int = int(os.environ.get("MYSQL_PORT", 3306))
+    MYSQL_DB: str = os.environ.get("MYSQL_DB", 'fastapi')
+    DATABASE_URI: str = f"mysql+pymysql://{MYSQL_USER}:%s@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DB}" % quote_plus(MYSQL_PASS)
 
     # JWT Secret Key
     JWT_SECRET: str = os.environ.get("JWT_SECRET", "649fb93ef34e4fdf4187709c84d643dd61ce730d91856418fdcf563f895ea40f")

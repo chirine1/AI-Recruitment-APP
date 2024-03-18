@@ -10,12 +10,12 @@ from starlette.testclient import TestClient
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from backend.app.main import app
-from backend.app.config.email import fm
-from backend.app.config.database import Base, get_session
-from backend.app.models.user import User
-from backend.app.config.security import hash_password
-from backend.app.services.user import _generate_tokens
+from app.main import app
+from app.config.email import fm
+from app.config.database import Base, get_session
+from app.models.user import User
+from app.config.security import hash_password
+from app.services.user import _generate_tokens
 
 USER_NAME = "Keshari Nandan"
 USER_EMAIL = "keshari@describly.com"
