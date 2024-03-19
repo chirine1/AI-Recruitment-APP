@@ -100,7 +100,7 @@ function Login() {
                                     </label>
                                 </div>
                                 <div>
-                                    <Link to="/forgot-password" className="text-sm text-blue-500">
+                                    <Link to="/forgot-password" className="mb-0 mt-2 pt-1 text-sm font-semibold">
                                         Forgot password?
                                     </Link>
                                 </div>
@@ -113,8 +113,8 @@ function Login() {
                                 {isSubmitting ? 'Loading...' : 'Login'}
                             </button>
                         </form>
-                        <p className="text-center mt-4">
-                            Don't have an account? <Link to="/register" className="text-blue-500">Register here</Link>
+                        <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
+                            Don't have an account? <Link to="/register" className="text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700">Register here</Link>
                         </p>
                     </div>
                 </div>
