@@ -132,7 +132,7 @@ function Register() {
                                     <button 
                                         disabled={isSubmitting}
                                         type="submit"
-                                        className="btn btn-primary btn-block">Register Now
+                                        className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Register Now
                                     </button>
                                     <p 
                                         className="mb-0 mt-2 pt-1 text-sm font-semibold">Have already an account?  <Link to="/"className="text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700">Login here</Link>
